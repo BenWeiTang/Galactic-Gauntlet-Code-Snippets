@@ -1,0 +1,7 @@
+# Capture Zone
+
+[Zone](https://github.com/BenWeiTang/Galactic-Gauntlet-Code-Snippets/blob/main/CaptureZone/Zone.cs) and [Zone Manager](https://github.com/BenWeiTang/Galactic-Gauntlet-Code-Snippets/blob/main/CaptureZone/ZoneManager.cs) are used an a game mode where the objective is to capture zones by staying in them for long enough, and thereafter earn points every second.
+
+[Zone](https://github.com/BenWeiTang/Galactic-Gauntlet-Code-Snippets/blob/main/CaptureZone/Zone.cs) is a derived class of MonoBehaviour and is attached to a zone prefab. That considers collisions with players. It holds a meter which represents the progress of a team in capturing the zone. It also takes into account the possibility of other teams contesting the zone and how to behave accordingly. Finally, it communicates to [Zone Manager](https://github.com/BenWeiTang/Galactic-Gauntlet-Code-Snippets/blob/main/CaptureZone/ZoneManager.cs) and its own visuals across the network.
+
+[Zone Manager](https://github.com/BenWeiTang/Galactic-Gauntlet-Code-Snippets/blob/main/CaptureZone/ZoneManager.cs) controls the activation and deactivation of all the zones present in a level. That includes the registration of zones, the number of zones activated at a given moment, the length of the zone-switching cycle, and randomly turning on/off zones in a way that feels natural. It is also responsibile for networking the aforementioned data. 
